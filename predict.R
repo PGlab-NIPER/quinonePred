@@ -1,17 +1,22 @@
-Sys.setenv(JAVA_HOME='')
 require("randomForest")
 require("kernlab")
 require("xgboost")
 require("rcdk")
 require("caret")
+library('rcdk')
 source('data/imports/bfs.R')
 load("data/bin.RData")
 xgb2d <- xgb.load("data/xgb2d.model")
 xgbfp <- xgb.load("data/xgbfp.model")
 xgbcbd <- xgb.load("data/xgbcbd.model")
 smartcyp_smarts <- read.csv("data/imports/smartcypenergyvalues.csv")
-smartcyp_smarts <- read.csv("data/imports/smartcypenergyvalues.csv")
 
+cat("","#########################",
+    "#                       #",
+    "#  Select an SDF file-  #",
+    "#                       #",
+    "#########################", 
+    sep = "\n")
 infile <- file.choose()
 molecules <- rcdk::load.molecules(infile,typing = T,aromaticity = T)
 molecules <- lapply(molecules, rcdk::get.largest.component)
@@ -126,7 +131,7 @@ distance_to_model <- apply(probs, 1, sd)
 domain <- ifelse(distance_to_model < 0.3, TRUE,FALSE)
 smiles <-  unlist(lapply(molecules, rcdk::get.smiles))
 molnames <-  unlist(lapply(molecules, rcdk::get.title))
-results <- cbind.data.frame(Name = molnamesSMILES=smiles,Prediction=ensemble_pred, Probability = ensemble_prob, distance_to_model, Applicability_Domain = domain)
+results <- cbind.data.frame(Name = molnames, SMILES=smiles,Prediction=ensemble_pred, Probability = ensemble_prob, distance_to_model, Applicability_Domain = domain)
 write.csv(results, file = "quinone_predictions.csv", row.names = F)
 
 

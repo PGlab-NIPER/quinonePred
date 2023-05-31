@@ -10,5 +10,5 @@ QuinonePred is a machine learning based tool. This tool can predict whether a sm
 * R language (64 bit) ( make sure to add the path of R language to the sytem environment variables )
 
 # Required R libraries
-* Use following command in the command prompt to install required R libraries 
+* Use following command in the command prompt to install required R libraries:                                                         
 R -e "install.packages(c('kernlab','randomForest','caret','rcdk','xgboost'),repos='https://cloud.r-project.org', dependencies=TRUE")

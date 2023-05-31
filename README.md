@@ -7,7 +7,7 @@ QuinonePred is a machine learning based tool. This tool can predict whether a sm
 
 # System dependencies
 * Java run time environment (64 bit)
-* R language (64 bit) (make sure to add the path of R language to the sytem environment variables)
+* R language (64 bit) ( make sure to add the path of R language to the sytem environment variables )
 
 # Required R libraries
 * Use following command in the command prompt to install required R libraries 

@@ -35,4 +35,3 @@ Rscript predict.R
 ```
 * User wil be prompted to select ``.sdf`` file of query molecules
 * Once the .sdf file is selected and the process is completed, results will be saved in ``quinone_predictions.csv`` file
-* 

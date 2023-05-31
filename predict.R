@@ -17,7 +17,13 @@ cat("","#########################",
     "#                       #",
     "#########################", 
     sep = "\n")
-infile <- file.choose()
+
+
+infile <- file.choose()   
+# Here file.choose() can be relpaced with path of input molecule file e.g. infile <- "D:/data/query_molecule.sdf". 
+# If the .sdf file is stored in same folder as current working directory then this line of code can be rewritten as: infile <- "query_molecule.sdf"
+
+
 molecules <- rcdk::load.molecules(infile,typing = T,aromaticity = T)
 molecules <- lapply(molecules, rcdk::get.largest.component)
 rcdk::write.molecules(molecules, 'data/temp/processed.sdf')

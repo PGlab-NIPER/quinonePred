@@ -17,4 +17,4 @@ For example for R version 4.2.0:
 
 # Required R libraries
 * Use following command in the command prompt to install required R libraries:                                                         
-R -e "install.packages(c('kernlab','randomForest','caret','rcdk','xgboost'),repos='https://cloud.r-project.org', dependencies=TRUE")
+``R -e "install.packages(c('kernlab','randomForest','caret','rcdk','xgboost'),repos='https://cloud.r-project.org', dependencies=TRUE")``

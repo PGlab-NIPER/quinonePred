@@ -28,10 +28,10 @@ R -e "install.packages(c('kernlab','randomForest','caret','rcdk','xgboost'),repo
 # Usage
 To make prediction using quinonePred first save the structures of query molecules in .sdf format
 
-* Download the repository and save all the files and folders of repository in one folder
-* Then Use the follwing command by changing current working directory to the folder where repository predict.R is saved
+* 1. Download the repository and save all the files and folders of repository in one folder
+* 2. Then Use the follwing command by changing current working directory to the folder where repository predict.R is saved
 ```bash
 Rscript predict.R
 ```
-* User wil be prompted to select ``.sdf`` file of query molecules
-* Once the .sdf file is selected and the process is completed, results will be saved in ``quinone_predictions.csv`` file
+* 3. User wil be prompted to select ``.sdf`` file of query molecules
+Once the .sdf file is selected and the process is completed, results will be saved in ``quinone_predictions.csv`` file

@@ -1,7 +1,6 @@
 require("randomForest")
 require("kernlab")
 require("xgboost")
-require("rcdk")
 require("caret")
 library('rcdk')
 source('data/imports/bfs.R')
